@@ -5,12 +5,17 @@ export default {
   theme: {
     extend: {
       animation: {
-        "fade-in": "fadeIn 2s ease-out forwards",
+        "fade-in-left": "fadeInLeft 1s ease-out forwards",
+        "fade-in-right": "fadeInRight 1s ease-out forwards",
       },
       keyframes: {
-        fadeIn: {
-          "0%": { opacity: 0 },
-          "100%": { opacity: 1 },
+        fadeInLeft: {
+          "0%": { opacity: 0, transform: "translateX(-50px)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
+        },
+        fadeInRight: {
+          "0%": { opacity: 0, transform: "translateX(50px)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
         },
       },
     },
