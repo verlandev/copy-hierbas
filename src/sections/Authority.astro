@@ -1,0 +1,21 @@
+---
+import { clients } from "../data/clients";
+---
+<section class="mb-10">
+  <div>
+    <!-- <h1 class="text-lg tracking-widest text-center font-extrabold text-gray-600">Me has visto en:</h1> -->
+    <div class="flex flex-wrap justify-center gap-x-10 max-w-4xl mx-auto mt-10">
+      {clients.map((client) => (
+        <img 
+          src={client.logo} 
+          alt={client.name}
+          loading="lazy"
+          width={client.width}
+          height={client.isSVG ? undefined : client.height}
+          class={`object-contain pt-2 ${
+            !client.isWhite ? 'invert brightness-90': ''}`}
+        />
+      ))}
+    </div>
+  </div>
+</section>
