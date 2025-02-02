@@ -14,7 +14,11 @@ const { title } = Astro.props
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{
+      title 
+      ? `${title} | Tu Copy Hierbas de confianza` 
+      : 'Tu Copy Hierbas de confianza'
+    }</title>
 	</head>
 	<body>
     <div class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
@@ -41,7 +45,7 @@ const { title } = Astro.props
 }
 
 ::-webkit-scrollbar-track {
-  background: #f3f4f6; /* Color del fondo de la barra (gray-100 de Tailwind) */
+  background: #312f2f; /* Color del fondo de la barra (gray-100 de Tailwind) */
   border-radius: 10px;
 }
 
