@@ -1,14 +1,99 @@
-<section class="w-full flex justify-center shadow-lg p-8 py-12 bg-gray-900 mb-10">
-  <div class="flex flex-col lg:flex-row items-center text-gray-300 text-lg">
+---
+import gsap from 'gsap'
+---
+
+<section
+  id="stamp-section"
+  class="w-full flex justify-center shadow-lg pt-5 pb-20 lg:pt-20 lg:pb-20 bg-gray-900 overflow-x-hidden"
+>
+  <div class="relative flex flex-col lg:flex-row items-center text-gray-300 text-lg">
+    <img
+      id="stamp"
+      src="/images/Red-Alert.png"
+      alt="Spoiler"
+      class="w-[90vw] max-w-[400px] lg:w-[420px] -rotate-12 lg:absolute top-0 left-0 lg:translate-x-[-40%] lg:translate-y-[-38%] opacity-0 scale-50"
+    />
+
+    <div
+      class="bg-gray-800 shadow-lg p-[10%] rounded-xl w-[330px] lg:w-[700px] lg:max-w-[900px] flex flex-col gap-4 text-pretty"
+    >
+      <p>
+        Antes de nada te digo que, además de compartir contigo mis emails folclóricos, también te
+        voy a vender cosas abiertamente, que una tiene la mala costumbre de comer todos los días.
+      </p>
+      <h1 class="text-center text-2xl font-black text-indigo-500 pt-5 pb-5">
+        ¿Qué te voy a vender?
+      </h1>
+      <p>
+        Mis servicios de <span class="text-gray-100 font-bold"
+          >copy para lanzamientos de infoproductos y mis futuras formaciones</span
+        > para que descubras cómo vender lo tuyo desde la coherencia espiritual.
+      </p>
+      <p>
+        <span class="italic text-gray-100"
+          >(buah, estoy preparando una que me tiene emocionada)</span
+        >.
+      </p>
+      <p>
+        Puedes entrar para <span class="text-gray-100 font-bold">aprender y divertirte</span> y no comprar
+        nada, of course.
+      </p>
+      <p>Pero no podía menos que ser honesta y coherente para que no te pille por sorpresa.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from 'gsap'
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const stamp = document.getElementById('stamp')
+    const section = document.getElementById('stamp-section')
+
+    if (!stamp || !section) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            gsap.fromTo(
+              stamp,
+              { opacity: 0, scale: 0.5, rotate: -12 },
+              {
+                opacity: 1,
+                scale: 1,
+                duration: 0.3,
+                ease: 'power2.out',
+                delay: 1.5, // Retrasa la animación 2 segundos después de que la sección sea visible
+                scrollTrigger: {
+                  trigger: '#stamp-section',
+                  start: 'top 80%', // Se activa cuando el 80% de la sección es visible
+                  toggleActions: 'play none none none',
+                },
+              }
+            )
+            observer.unobserve(section) // Para que solo ocurra una vez
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    observer.observe(section)
+  })
+</script>
+
+<!-- <section id="stamp-section" class="w-full flex justify-center shadow-lg p-8 py-20 bg-gray-900  mb-10">
+  <div class="relative flex flex-col lg:flex-row items-center text-gray-300 text-lg">
     <div>
-      <!-- <Alert class='size-15' /> -->
        <img 
+        id="stamp"
         src="/images/Red-Alert.png" 
-        alt=""
-        class="w-[300px] lg:w-[420px] -rotate-12"
+        alt="Spoiler"
+        class="w-[300px] lg:w-[420px] -rotate-12 lg:absolute top-0 left-0 lg:translate-x-[-40%] lg:translate-y-[-38%]"
       >
     </div>
-    <div class="bg-gray-800 shadow-lg p-8 rounded-xl w-[330px] lg:w-[700px] lg:max-w-[900px] flex flex-col gap-4 text-pretty">
+    <div class="bg-gray-800 shadow-lg p-[10%] rounded-xl w-[330px] lg:w-[700px] lg:max-w-[900px] flex flex-col gap-4 text-pretty">
       <p>Antes de nada te digo que, además de compartir contigo mis emails folclóricos, también te voy a vender cosas abiertamente, que una tiene la mala costumbre de comer todos los días.</p>
       <h1 class="text-center text-2xl font-black text-indigo-500 pt-5 pb-5">¿Qué te voy a vender?</h1>
       <p>Mis servicios de <span class="text-gray-100 font-bold">copy para lanzamientos de infoproductos y mis futuras formaciones</span> para que descubras cómo vender lo tuyo desde la coherencia espiritual. </p>
@@ -17,4 +102,26 @@
       <p>Pero no podía menos que ser honesta y coherente para que no te pille por sorpresa.</p>
     </div>
   </div>
-</section>
+</section> -->
+
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const stamp = document.getElementById('stamp');
+    const section = document.getElementById('stamp-section');
+    if(!stamp || !section) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            stamp.classList.add('opacity-100', 'scale-100');
+          } else {
+            stamp.classList.remove('opacity-0', 'scale-50');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    )
+    observer.observe(section);
+  });
+</script> -->

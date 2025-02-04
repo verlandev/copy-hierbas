@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@fontsource-variable/raleway": "^5.1.1",
-    "astro": "^5.2.2"
+    "astro": "^5.2.2",
+    "gsap": "^3.12.7"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^6.0.0",
