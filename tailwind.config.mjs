@@ -5,10 +5,16 @@ export default {
   theme: {
     extend: {
       animation: {
+        "fade-in-top": "fadeInTop 1s ease-out forwards",
         "fade-in-left": "fadeInLeft 1s ease-out forwards",
         "fade-in-right": "fadeInRight 1s ease-out forwards",
+        "fade-in-bottom": "faceInBottom 1s ease-out forwards",
       },
       keyframes: {
+        fadeInTop: {
+          "0%": { opacity: 0, transform: "translateY(-50px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
         fadeInLeft: {
           "0%": { opacity: 0, transform: "translateX(-50px)" },
           "100%": { opacity: 1, transform: "translateX(0)" },
@@ -17,6 +23,10 @@ export default {
           "0%": { opacity: 0, transform: "translateX(50px)" },
           "100%": { opacity: 1, transform: "translateX(0)" },
         },
+        faceInBottom: {
+          "0%": { opacity: 0, transform: "translateY(50px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        }
       },
     },
   },

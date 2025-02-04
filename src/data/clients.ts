@@ -6,52 +6,43 @@ export const clients: Client[] = [
     logo: '/logos/soy-copywriter.svg',
     isSVG: true,
     isWhite: true,
-    width: 130    
   },
   {
     name: 'Alex Rovira',
     logo: '/logos/AlexRovira.png',
     isSVG: false,
-    isWhite: true,
-    width: 130,
-    height: 52
+    isWhite: true
   },
   {
     name: 'Victor Martín',
     logo: '/logos/victor-martin.png',
     isSVG: false,
-    isWhite: true,
-    width: 130, 
-    height: 44,
+    isWhite: true
   },
   {
     name: 'Incubadora de Lanzamientos',
     logo: '/logos/incubadora-lanzamientos.webp',
     isSVG: false,
-    isWhite: false,
-    width: 130, 
-    height: 100
+    isWhite: false
   },
   {
     name: 'Mariana Fresnedo',
     logo: '/logos/mariana-fresnedo.webp',
     isSVG: false,
-    isWhite: false,
-    width: 130, 
-    height: 200
+    isWhite: false
   },
   {
     name: 'Quantum Quip',
     logo: '/logos/quantum-quip.svg',
     isSVG: true,
-    isWhite: true,
-    width: 130,
+    isWhite: true
+    
   },
   {
     name: 'Big Bang Conversion',
     logo: '/logos/bigbangConversion.svg',
     isSVG: true,
-    isWhite: true,
-    width: 130    
+    isWhite: true
+       
   }
 ]
