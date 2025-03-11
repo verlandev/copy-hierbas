@@ -1,13 +1,18 @@
-# Astro Starter Kit: Basics
+<h1 align='center'>🚀 SARAI FENIX | COPY HIERBAS 🚀 - Sitio Web Oficial 2025</h1>
 
-```sh
-npm create astro@latest -- --template basics
-```
+<div align="center">
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+![Astro](https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
+Este proyecto web es una landing para [@sarai_fenix](https://www.instagram.com/sarai_fenix), copy espiritual especializada en lanzamientos de infoproductos.
+
+Sitio web desarrollado por [Verlan](https://www.linkedin.com/in/beatriz-martinez-larrucea).
+
+![banner](./public/images/mockup_readme_presentation.png)
+
+</div>
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
 ![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
