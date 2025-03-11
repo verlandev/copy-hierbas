@@ -1,22 +1,62 @@
+---
+import '@fontsource-variable/raleway'
+import Footer from '../components/Footer.astro'
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon-SaraiFenix.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{
+      title 
+      ? `${title} | Tu Copy Hierbas de confianza` 
+      : 'Tu Copy Hierbas de confianza'
+    }</title>
 	</head>
 	<body>
-		<slot />
+    <div class="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+		  <slot />
+      <Footer />
+    </div>
 	</body>
 </html>
 
-<style>
+<style is:global>
 	html,
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+    font-family: 'Raleway variable', sans-serif;
+    margin: 0;
+    padding: 0;
+		min-height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 	}
+
+  /* Personalización de la barra de scroll */
+::-webkit-scrollbar {
+  width: 5px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #312f2f; /* Color del fondo de la barra (gray-100 de Tailwind) */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6366f1; /* indigo-500 */
+  transition: background 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5; /* indigo-600 al hacer hover */
+}
+
 </style>

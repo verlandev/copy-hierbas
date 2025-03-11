@@ -1,0 +1,48 @@
+---
+import Instagram from '/src/icons/instagram.svg'
+import Linkedin from '/src/icons/linkedin.svg'
+import Facebook from '/src/icons/facebook.svg'
+---
+
+<div class="w-full bg-gray-900 p-8 pl-10">
+  <div
+    class="lg:relative flex flex-col gap-10 lg:flex-row items-center w-full 2xl:max-w-[80%] lg:m-auto text-gray-100 text-sm font-semibold"
+  >
+    <!-- Izquierda -->
+    <div class="flex flex-1 lg:ml-8 text-center">
+      <p>
+        &copy; 2025 Sarai Fénix | Diseño de
+        <span
+          ><a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline hover:scale-110 transition-transform">Verlán</a
+          ></span
+        >
+      </p>
+    </div>
+
+    <!-- Centro (Posicionado absoluto para centrarse siempre) -->
+    <div
+      class="lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2 flex flex-col items-center justify-center lg:flex-row gap-6"
+    >
+      <a href="/legal" class="hover:text-indigo-500 transition-colors duration-300">Aviso Legal</a>
+      <a href="/cookies" class="hover:text-indigo-500 transition-colors duration-300">Política de Cookies</a>
+      <a href="/privacidad" class="hover:text-indigo-500 transition-colors duration-300">Política de privacidad</a>
+    </div>
+
+    <!-- Derecha (Redes sociales) -->
+    <div class="flex flex-1 justify-end gap-8 lg:mr-8 py-5">
+      <a href="https://www.instagram.com/saraifenix/" target="_blank" rel="noopener noreferrer">
+        <Instagram class="size-5 text-gray-100 transition-colors duration-300 hover:text-indigo-500 hover:scale-110" />
+      </a>
+      <a href="https://www.linkedin.com/in/saraifenix/" target="_blank" rel="noopener noreferrer">
+        <Linkedin class="size-5 text-gray-100 transition-colors duration-300 hover:text-indigo-500 hover:scale-110" />
+      </a>
+      <a href="https://twitter.com/saraifenix" target="_blank" rel="noopener noreferrer">
+        <Facebook class="size-5 text-gray-100 transition-colors duration-300 hover:text-indigo-500 hover:scale-110" />
+      </a>
+    </div>
+  </div>
+</div>

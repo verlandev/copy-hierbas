@@ -1,0 +1,67 @@
+---
+import SuscribeButton from '../components/SuscribeButton.astro'
+---
+
+<section class="w-full flex flex-col justify-center pb-20">
+  <div class="shadow-lg p-2 lg:p-8 bg-gray-900 mt-10 mb-20">
+    <div
+      class="relative text-gray-300 text-lg m-auto text-center pt-20 pb-32 max-w-1/3 2xl:max-w-1/3"
+    >
+      <h1 class="text-5xl px-4 tracking-wide mb-20">
+        Hola, soy <span class="text-indigo-500 font-bold">Sarai</span> y...
+      </h1>
+      <div class="flex flex-col text-3xl text-pretty mb-5 lg:mb-10 w-[90%] lg:w-3/4 m-auto">
+        <p class="font-bold">
+          Muchos dicen que soy la diva del copy, (mentira, sólo me lo ha dicho una persona, pero me
+          encantó, jajaja). Aunque a mí me gusta mucho más decir que soy <span
+            class="text-indigo-500 font-bold">tu copy hierbas de confianza</span
+          >.
+        </p>
+      </div>
+
+      <!-- Imagen alineada en el centro inferior -->
+      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[55%]">
+        <img
+          src="/src/assets/sobre-mi.jpg"
+          alt=""
+          class="rounded-full size-[170px] lg:size-[250px]"
+        />
+      </div>
+    </div>
+  </div>
+  <article
+    class="flex flex-col gap-6 prose prose-invert prose-lg mx-auto max-w-xl 2xl:max-w-2xl pt-20 text-lg px-6"
+  >
+    <p>
+      Y es que después de 33 años siendo el eterno diamante en bruto, la chica del enorme potencial,
+      pero con un trabajo precario y una familia que mantener <span class="italic"
+        >(lo de que fui madre a los 20 años y todo el chisme te lo cuento dentro)</span
+      >, descubrí que esto del copy era lo que yo quería ser de mayor.
+    </p>
+    <p>
+      Además, por el camino descubrí que soy una hierbas redomada. Quizá el universo me obligó a
+      descubrirlo, harto de ver cómo me estrellaba 500 veces en las mismas piedras.
+    </p>
+    <p>Así que me metí de lleno en este mundo.</p>
+    <p>
+      Y oye, parece que cuando una se alinea con sus dones y su propósito, la vida empieza a sonar de
+      otra manera.
+      <p>
+        Así que, en mi momento menos humilde te cuento que después de trabajar con <span
+          class="text-indigo-500 font-bold"
+          >Javi Pastor, Álex Rovira, Víctor Martín, Mariana Fresnedo de Quantum Quip, Dani Schepers
+          de la Incubadora de Lanzamientos, entre otros…</span
+        > algún aprendizaje y experiencia me he llevado, y tengo ganas de compartirlo contigo.
+      </p>
+      <p>¿Te vienes?</p>
+    </p>
+    <div class="flex flex-col items-center justify-center pt-20 gap-8">
+      <SuscribeButton />
+      <p class="text-center w-[80%] text-gray-600">
+        Si quieres divertirte y aprender algo por el camino, <span class="italic"
+          >yatusabe</span
+        >, apúntate a la newsletter folclórica.
+      </p>
+  </article>
+  </div>
+</section>
